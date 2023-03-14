@@ -22,7 +22,7 @@ public class Profile {
   }
   public String toString()
 	{
-		return (this.name + " " + this.age + " " + this.cpf + " " + this.email + " " + this.telefone);
+		return ("O Nome é: " + this.name + "\nA Idade é: " + this.age + "\nO CPF é:  " + this.cpf + "\nO E-mail é: " + this.email + "\nO telefone é: " + this.telefone);
 	}
   public static void cadastro(){
     
