@@ -1,7 +1,5 @@
 # NetflixClone
 
-![Cover](https://toppng.com/uploads/preview/netflix-logo-png-download-11660600814vkfgjh8swu.png)
-
 ##Criação do Backend da Netflix para fins academicos com base em Java
  
 ### Estes são nossos os nossos Github
