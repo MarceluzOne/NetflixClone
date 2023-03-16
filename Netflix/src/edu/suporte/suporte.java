@@ -2,5 +2,5 @@ package edu.suporte;
 
 public class suporte {
   String suporte;
-  int number;
+  String teste = "Testando github";
 }
