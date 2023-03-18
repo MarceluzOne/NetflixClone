@@ -28,7 +28,9 @@ public class suporte {
   public String getSolicitarTitulo(){
     return SolicitarTitulo;
   }
-  
+  public void setSolicitarTitulo(String SolicitarTitulo){
+      this.SolicitarTitulo = SolicitarTitulo;
+  }
 
 //método converte pra string
   public String toString(){
