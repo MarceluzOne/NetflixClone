@@ -2,11 +2,11 @@ package edu.profile;
 import java.util.Scanner;
 
 public class Profile {
-  String name;
-  int age;
-  String cpf;
-  String email;
-  String phone;
+  private String name;
+  private int age;
+  private String cpf;
+  private String email;
+  private String phone;
 
   public Profile(
     String name,
