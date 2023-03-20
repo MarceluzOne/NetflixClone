@@ -110,7 +110,7 @@ public class Suporte {
         default :
           System.out.println("Opção inválida!");
       }
-    } 
+  }
     while (option != 6);
       scan.close();
     
@@ -118,12 +118,12 @@ public class Suporte {
     Suporte SUPORTE = new Suporte(SolicitarTitulo,TermosDeUso,dicas,sobreNetflix,SAC);
    
     //System.out.println(SUPORTE);
-  }
+}
   //testando
    /*public String toString(){
       return("Titulo: " + this.SolicitarTitulo);}*/
 
-  public static void main(String []args) {
-    suporte();
-      }
+public static void main(String []args) {
+  suporte();
+  }
 }
