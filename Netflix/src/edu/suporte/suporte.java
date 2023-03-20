@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 
 //classe
-public class suporte {
+public class Suporte {
   String SolicitarTitulo;
   String TermosDeUso;
   String dicas;
@@ -11,7 +11,7 @@ public class suporte {
   String sac;
 
 //construtor
-  private suporte(
+  private Suporte(
     String SolicitarTitulo,
     String TermosDeUso,
     String dicas,
@@ -49,7 +49,7 @@ public class suporte {
       String Dicas = ("\nDICAS NETFLIX: Quando a Netflix não estiver funcionando, é possível resolver a maioria dos problemas com as instruções abaixo.\n- Desligue o aparelho e religue-o\n- Limpe os dados do aplicativo Netflix\n- Reinstale o aplicativo Netflix\n- Teste sua conexão à Internet\n- Reinicie a rede doméstica.\n");
       String sobre = ("\nSOBRE A NETFLIX: A Netflix é um serviço de streaming que oferece uma ampla variedade de \nséries, filmes e documentários premiados em milhares de aparelhos conectados à internet.\nVocê pode assistir a quantos filmes e séries quiser, quando e onde quiser tudo por um preço mensal acessível.\n");
       String Sac = ("\nSAC: Entre em contato conosco: +55 (xx) x xxxx-xxxx \n");
-      suporte SUPORTE = new suporte(titulo,termos,Dicas,sobre,Sac);
+      Suporte SUPORTE = new Suporte(titulo,termos,Dicas,sobre,Sac);
       System.out.println(SUPORTE);
 
   }
