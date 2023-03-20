@@ -58,7 +58,7 @@ public class Suporte {
     this.SolicitarTitulo = titulo;
   }
   //método
-  public static void Suporte(){
+  public static void suporte(){
     Scanner text = new Scanner(System.in);
 
     String SolicitarTitulo = " ";
@@ -112,11 +112,16 @@ public class Suporte {
         }
       }
     }        
+    //guardando as info
     Suporte SUPORTE = new Suporte(SolicitarTitulo,TermosDeUso,dicas,sobreNetflix,SAC);
-  
+   // System.out.println(SUPORTE);
+
   }
-    
+  //testando
+   /*/ public String toString(){
+      return("Titulo: " + this.SolicitarTitulo);}*/
+
   public static void main(String []args) {
-    Suporte();
+    suporte();
       }
 }
