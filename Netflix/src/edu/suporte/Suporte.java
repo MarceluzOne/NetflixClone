@@ -104,7 +104,6 @@ public class Suporte {
 
         case 6 :
         System.out.println("----SUPORTE FECHADO----");
-        scan.close();
         break;
 
         default :
@@ -112,7 +111,6 @@ public class Suporte {
       }
   }
     while (option != 6);
-      scan.close();
     
     //guardando as info
     Suporte SUPORTE = new Suporte(SolicitarTitulo,TermosDeUso,dicas,sobreNetflix,SAC);
