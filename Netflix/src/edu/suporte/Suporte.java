@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 //classe
 public class Suporte {
-  String SolicitarTitulo;
-  String TermosDeUso;
-  String dicas;
-  String sobreNetflix;
-  String sac;
+  private String SolicitarTitulo;
+  private String TermosDeUso;
+  private String dicas;
+  private String sobreNetflix;
+  private String SAC;
 
 //construtor
   private Suporte(
@@ -16,44 +16,112 @@ public class Suporte {
     String TermosDeUso,
     String dicas,
     String sobreNetflix,
-    String sac){
+    String SAC){
       this.SolicitarTitulo = SolicitarTitulo;
       this.TermosDeUso = TermosDeUso;
       this.dicas = dicas;
       this.sobreNetflix = sobreNetflix;
-      this.sac = sac;
+      this.SAC = SAC;
   }
-
 
   public String getSolicitarTitulo(){
     return SolicitarTitulo;
   }
   public void setSolicitarTitulo(String SolicitarTitulo){
       this.SolicitarTitulo = SolicitarTitulo;
+    }
+    public String getTermosDeUso(){
+      return TermosDeUso;
+    }
+    public void setTermosDeUso(String TermosDeUso){
+      this.TermosDeUso = TermosDeUso;
+    }
+  public String getdicas(){
+    return dicas;
   }
-
-//método converte pra string
-  public String toString(){
-      return ("Título selecionado: " + this.SolicitarTitulo +" --- Obrigada pela sugestão!\n"+ this.TermosDeUso + this.dicas + this.sobreNetflix + this.sac);
+  public void setdicas(String dicas){
+      this.dicas = dicas;
   }
-
+  public String getsobreNetflix(){
+    return sobreNetflix;
+  }
+  public void setsobreNetflix(String sobreNetflix){
+      this.sobreNetflix = sobreNetflix;
+  }
+  public String getSAC(){
+    return SAC;
+  }
+  public void setSAC(String SAC){
+    this.SAC = SAC;
+  }
+  public void Titulo(String titulo) {
+    this.SolicitarTitulo = titulo;
+  }
   //método
   public static void suporte(){
+    Scanner text = new Scanner(System.in);
 
-      Scanner text = new Scanner(System.in);
+    String SolicitarTitulo = " ";
+    String TermosDeUso = ("\nTERMOS DE USO: A Netflix fornece um serviço personalizado de assinatura\nque permite aos nossos assinantes acessar conteúdo de entretenimento. \n");
+    String dicas = ("\nDICAS NETFLIX: Quando a Netflix não estiver funcionando, é possível resolver a maioria dos problemas com as instruções abaixo.\n- Desligue o aparelho e religue-o\n- Limpe os dados do aplicativo Netflix\n- Reinstale o aplicativo Netflix\n- Teste sua conexão à Internet\n- Reinicie a rede doméstica.\n");
+    String sobreNetflix = ("\nSOBRE A NETFLIX: A Netflix é um serviço de streaming que oferece uma ampla variedade de \nséries, filmes e documentários premiados em milhares de aparelhos conectados à internet.\nVocê pode assistir a quantos filmes e séries quiser, quando e onde quiser tudo por um preço mensal acessível.\n");
+    String SAC = ("\nSAC: Entre em contato conosco: +55 (xx) x xxxx-xxxx \n");
+    
+    Scanner scan = new Scanner(System.in);
+    int option;
 
-      System.out.println("Bem vindo(a) ao Suporte Netflix!\nQual novo filme deseja solicitar? ");
-      String titulo = text.nextLine();
+    do{
+    
+      System.out.println("\n--------------SUPORTE--------------\nBem vindo(a) ao Suporte Netflix!\n[1]Solicitar um novo filme/título\n[2]Termos de Uso\n[3]Dicas Netflix\n[4]Sobre a Netflix\n[5]SAC\n[6]Sair\n");
+      System.out.println("\nSUA OPÇÃO: \n");
+      option = scan.nextInt();
 
-      String termos = ("\nTERMOS DE USO: A Netflix fornece um serviço personalizado de assinatura\nque permite aos nossos assinantes acessar conteúdo de entretenimento. \n");
-      String Dicas = ("\nDICAS NETFLIX: Quando a Netflix não estiver funcionando, é possível resolver a maioria dos problemas com as instruções abaixo.\n- Desligue o aparelho e religue-o\n- Limpe os dados do aplicativo Netflix\n- Reinstale o aplicativo Netflix\n- Teste sua conexão à Internet\n- Reinicie a rede doméstica.\n");
-      String sobre = ("\nSOBRE A NETFLIX: A Netflix é um serviço de streaming que oferece uma ampla variedade de \nséries, filmes e documentários premiados em milhares de aparelhos conectados à internet.\nVocê pode assistir a quantos filmes e séries quiser, quando e onde quiser tudo por um preço mensal acessível.\n");
-      String Sac = ("\nSAC: Entre em contato conosco: +55 (xx) x xxxx-xxxx \n");
-      Suporte SUPORTE = new Suporte(titulo,termos,Dicas,sobre,Sac);
-      System.out.println(SUPORTE);
+      switch(option){
 
+        case 1 : 
+          
+          System.out.println("\nQual novo filme deseja solicitar?");
+          SolicitarTitulo = text.nextLine();
+          System.out.println("Título selecionado: " + SolicitarTitulo +" --- Obrigada pela sugestão!");
+          
+          break;
+       
+        case 2: 
+          System.out.println(TermosDeUso);
+          break;
+        
+        case 3: 
+          System.out.println(dicas);
+          break;
+        
+        case 4: 
+          System.out.println(sobreNetflix);
+          break;
+        
+        case 5: 
+          System.out.println(SAC);
+          break;
+
+        case 6 :
+        System.out.println("----SUPORTE FECHADO----");
+        break;
+
+        default :
+          System.out.println("Opção inválida!");
+      }
   }
-  public static void main(String []args) {
-      suporte();
+    while (option != 6);
+    
+    //guardando as info
+    Suporte SUPORTE = new Suporte(SolicitarTitulo,TermosDeUso,dicas,sobreNetflix,SAC);
+   
+    //System.out.println(SUPORTE);
+}
+  //testando
+   /*public String toString(){
+      return("Titulo: " + this.SolicitarTitulo);}*/
+
+public static void main(String []args) {
+  suporte();
   }
-  }
+}
