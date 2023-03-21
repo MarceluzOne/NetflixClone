@@ -71,41 +71,31 @@ public class Suporte {
     int option;
 
     do{
-    
       System.out.println("\n--------------SUPORTE--------------\nBem vindo(a) ao Suporte Netflix!\n[1]Solicitar um novo filme/título\n[2]Termos de Uso\n[3]Dicas Netflix\n[4]Sobre a Netflix\n[5]SAC\n[6]Sair\n");
       System.out.println("\nSUA OPÇÃO: \n");
       option = scan.nextInt();
 
       switch(option){
-
-        case 1 : 
-          
+        case 1 :           
           System.out.println("\nQual novo filme deseja solicitar?");
           SolicitarTitulo = text.nextLine();
           System.out.println("Título selecionado: " + SolicitarTitulo +" --- Obrigada pela sugestão!");
-          
           break;
-       
         case 2: 
           System.out.println(TermosDeUso);
-          break;
-        
+          break;        
         case 3: 
           System.out.println(dicas);
-          break;
-        
+          break;        
         case 4: 
           System.out.println(sobreNetflix);
-          break;
-        
+          break;        
         case 5: 
           System.out.println(SAC);
           break;
-
         case 6 :
         System.out.println("----SUPORTE FECHADO----");
         break;
-
         default :
           System.out.println("Opção inválida!");
       }
@@ -114,11 +104,11 @@ public class Suporte {
     
     //guardando as info
     Suporte SUPORTE = new Suporte(SolicitarTitulo,TermosDeUso,dicas,sobreNetflix,SAC);
-   
+  
     //System.out.println(SUPORTE);
 }
   //testando
-   /*public String toString(){
+  /*public String toString(){
       return("Titulo: " + this.SolicitarTitulo);}*/
 
 public static void main(String []args) {
