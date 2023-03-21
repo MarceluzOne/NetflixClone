@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import edu.profile.Profile;
+import edu.suporte.Suporte;
 
 class Main{
 
@@ -43,6 +44,7 @@ class Main{
           break;
         case 2:
           System.out.println("Iniciando o Suporte");
+          Suporte.suporte();
           break;
         case 3:
             System.out.println("Opção 3 selecionada.");
