@@ -4,7 +4,7 @@ import java.util.Scanner;
 class Filmes {
     
     private String nome;
-    private int anoLancamento; 
+    private int anoLancamento;  
     private String genero;
     private int classificacaoIndicativa;
 
@@ -45,22 +45,24 @@ class Filmes {
         this.classificacaoIndicativa = classificacaoIndicativa; 
     }
 
-    public static void  cadastro(){
-        Scanner text = new Scanner(System.in);
-        System.out.println("Informe o nome do filme: ");
-        String nome = text.nextLine();
-        System.out.println("Informe o ano de lançamento: ");
-        String anoLancamento = text.nextLine();
-        System.out.println("Informe o genero: ");
-        String genero = text.nextLine();
-        System.out.println("Informe a classificação indicativa: ");
-        String classificacaoIndicativa = text.nextLine();
-        
-        Filmes filme1 = new Filmes(nome,anoLancamento,genero,classificacaoIndicativa);
+    public void cadastroFilme(){
 
-    }
-    public static void main(String[] args){
-        cadastro();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Informe o nome do filme a ser cadastrado: ");
+        String nome = input.nextLine();
+        System.out.println("Informe o ano de lançamento do filme a ser cadastrado: ");
+        int anoLancamento = input.nextInt();
+        System.out.println("Informe o genero do filme a ser cadastrado: ");
+        String genero = input.nextLine();
+        System.out.println("Informe a classificação indicativa do filme a ser cadastrado: ");
+        int classificacaoIndicativa = input.nextInt();
+
+            Filmes novofilme = new Filmes(nome, anoLancamento, genero, classificacaoIndicativa);
+        
+    }   
+    public void main(String[] args){
+        
+        cadastroFilme();
 
     }
 }
