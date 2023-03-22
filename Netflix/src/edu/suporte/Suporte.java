@@ -67,7 +67,7 @@ public class Suporte {
     int option;
 
     do{
-      System.out.println("\n--------------SUPORTE--------------\nBem vindo(a) ao Suporte Netflix!\n[1]Solicitar um novo filme/título\n[2]Termos de Uso\n[3]Dicas Netflix\n[4]Sobre a Netflix\n[5]sac\n[6]Sair\n");
+      System.out.println("\n--------------SUPORTE--------------\nBem vindo(a) ao Suporte Netflix!\n[1]Solicitar um novo filme/título\n[2]Termos de Uso\n[3]Dicas Netflix\n[4]Sobre a Netflix\n[5]SAC\n[6]Sair\n");
       System.out.println("\nSUA OPÇÃO: \n");
       option = scan.nextInt();
 
