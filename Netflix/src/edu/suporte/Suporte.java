@@ -9,6 +9,11 @@ public class Suporte {
   private String dicas;
   private String sobreNetflix;
   private String SAC;
+  private String SolicitarTitulo;
+  private String TermosDeUso;
+  private String dicas;
+  private String sobreNetflix;
+  private String SAC;
 
 //construtor
   private Suporte(
@@ -17,10 +22,12 @@ public class Suporte {
     String dicas,
     String sobreNetflix,
     String SAC){
+    String SAC){
       this.SolicitarTitulo = SolicitarTitulo;
       this.TermosDeUso = TermosDeUso;
       this.dicas = dicas;
       this.sobreNetflix = sobreNetflix;
+      this.SAC = SAC;
       this.SAC = SAC;
   }
 
@@ -56,9 +63,37 @@ public class Suporte {
   }
   public void Titulo(String titulo) {
     this.SolicitarTitulo = titulo;
+    }
+    public String getTermosDeUso(){
+      return TermosDeUso;
+    }
+    public void setTermosDeUso(String TermosDeUso){
+      this.TermosDeUso = TermosDeUso;
+    }
+  public String getdicas(){
+    return dicas;
+  }
+  public void setdicas(String dicas){
+      this.dicas = dicas;
+  }
+  public String getsobreNetflix(){
+    return sobreNetflix;
+  }
+  public void setsobreNetflix(String sobreNetflix){
+      this.sobreNetflix = sobreNetflix;
+  }
+  public String getSAC(){
+    return SAC;
+  }
+  public void setSAC(String SAC){
+    this.SAC = SAC;
+  }
+  public void Titulo(String titulo) {
+    this.SolicitarTitulo = titulo;
   }
   //método
   public static void suporte(){
+    Scanner text = new Scanner(System.in);
     Scanner text = new Scanner(System.in);
 
     String SolicitarTitulo = " ";
@@ -71,6 +106,7 @@ public class Suporte {
     int option;
 
     do{
+<<<<<<< HEAD
       System.out.println("\n--------------SUPORTE--------------\nBem vindo(a) ao Suporte Netflix!\n[1]Solicitar um novo filme/título\n[2]Termos de Uso\n[3]Dicas Netflix\n[4]Sobre a Netflix\n[5]SAC\n[6]Sair\n");
       System.out.println("\nSUA OPÇÃO: \n");
       option = scan.nextInt();
@@ -96,6 +132,43 @@ public class Suporte {
         case 6 :
         System.out.println("----SUPORTE FECHADO----");
         break;
+=======
+    
+      System.out.println("\n--------------SUPORTE--------------\nBem vindo(a) ao Suporte Netflix!\n[1]Solicitar um novo filme/título\n[2]Termos de Uso\n[3]Dicas Netflix\n[4]Sobre a Netflix\n[5]SAC\n[6]Sair\n");
+      System.out.println("\nSUA OPÇÃO: \n");
+      option = scan.nextInt();
+
+      switch(option){
+
+        case 1 : 
+          
+          System.out.println("\nQual novo filme deseja solicitar?");
+          SolicitarTitulo = text.nextLine();
+          System.out.println("Título selecionado: " + SolicitarTitulo +" --- Obrigada pela sugestão!");
+          
+          break;
+       
+        case 2: 
+          System.out.println(TermosDeUso);
+          break;
+        
+        case 3: 
+          System.out.println(dicas);
+          break;
+        
+        case 4: 
+          System.out.println(sobreNetflix);
+          break;
+        
+        case 5: 
+          System.out.println(SAC);
+          break;
+
+        case 6 :
+        System.out.println("----SUPORTE FECHADO----");
+        break;
+
+>>>>>>> 1802580b21789d45643a5b875260c5490e551ac5
         default :
           System.out.println("Opção inválida!");
       }
@@ -104,14 +177,26 @@ public class Suporte {
     
     //guardando as info
     Suporte SUPORTE = new Suporte(SolicitarTitulo,TermosDeUso,dicas,sobreNetflix,SAC);
+<<<<<<< HEAD
   
     //System.out.println(SUPORTE);
 }
   //testando
   /*public String toString(){
+=======
+   
+    //System.out.println(SUPORTE);
+}
+  //testando
+   /*public String toString(){
+>>>>>>> 1802580b21789d45643a5b875260c5490e551ac5
       return("Titulo: " + this.SolicitarTitulo);}*/
 
 public static void main(String []args) {
   suporte();
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1802580b21789d45643a5b875260c5490e551ac5
