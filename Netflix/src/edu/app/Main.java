@@ -2,23 +2,10 @@ import java.util.Scanner;
 import edu.profile.Profile;
 import edu.suporte.Suporte;
 
+
 class Main{
 
-  public static void cadastro(){
-    Scanner text = new Scanner(System.in);
-    System.out.println("Qual o CPF");
-    String cpf = text.nextLine();
-    System.out.println("Qual o nome?");
-    String name = text.nextLine();
-    System.out.println("Qual o email");
-    String email =text.nextLine();
-    System.out.println("Qual o telefone");
-    String phone = text.nextLine();
-    System.out.println("Qual a idade");
-    int age = text.nextInt();
-    Profile pessoa = new Profile(name,age,cpf,email,phone);
-    System.out.println(pessoa);
-  }
+  
 
 
   public static void suporte(){
@@ -75,7 +62,6 @@ class Main{
       return("Titulo: " + this.SolicitarTitulo);}*/
 
 
-
   public static void main(String[] args) {
       
     Scanner input = new Scanner(System.in);
@@ -84,7 +70,7 @@ class Main{
       System.out.println("Escolha uma opção:");
       System.out.println("1 - Criar um Usuário");
       System.out.println("2 - Acessar o Suporte");
-      System.out.println("3 - Filmes");
+      System.out.println("3 - Cadastro de Filme");
       System.out.println("4 - Opção 4");
       System.out.println("5 - Opção 5");
       System.out.println("0 - Sair");
@@ -94,14 +80,14 @@ class Main{
       switch(escolha) {
         case 1:
           System.out.println("Criando um novo Usuario");
-          cadastro();
+          Profile.cadastro();
           break;
         case 2:
           System.out.println("Iniciando o Suporte");
-          suporte();
+          Suporte.suporte();
           break;
         case 3:
-            System.out.println("Opção 3 selecionada.");
+            System.out.println("Iniciando Cadastro de Filme");
             break;
         case 4:
             System.out.println("Opção 4 selecionada.");
