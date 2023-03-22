@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import edu.profile.Profile;
 import edu.suporte.Suporte;
-import edu.filmes.Filmes;
+import edu.filmes.Filme;
 
 class Main{
 
@@ -32,7 +32,7 @@ class Main{
           break;
         case 3:
             System.out.println("Iniciando Cadastro de Filme");
-            Filmes.cadastroFilme();
+            Filme.cadastroFilme();
             break;
         case 4:
             System.out.println("Opção 4 selecionada.");

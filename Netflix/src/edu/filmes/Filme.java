@@ -1,14 +1,14 @@
 package edu.filmes;
 import java.util.Scanner;
 
-public class Filmes {
+public class Filme{
     
     private String nome;
     private int anoLancamento;  
     private String genero;
     private String classificacaoIndicativa;
 
-    public Filmes(
+    public Filme(
         String nome,
         int anoLancamento,
         String genero,
@@ -57,7 +57,7 @@ public class Filmes {
         System.out.println("Informe o ano de lançamento do filme a ser cadastrado: ");
         int anoLancamento = input.nextInt();
 
-            Filmes novofilme = new Filmes(nome, anoLancamento, genero, classificacaoIndicativa);
+            Filme novofilme = new Filme(nome, anoLancamento, genero, classificacaoIndicativa);
         
     }   
 }
