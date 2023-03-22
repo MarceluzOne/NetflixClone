@@ -45,19 +45,40 @@ public class Filmes {
         this.classificacaoIndicativa = classificacaoIndicativa; 
     }
 
+<<<<<<< HEAD
     public static void cadastroFilme(){
+=======
+    public void cadastroFilme(){
+>>>>>>> main
 
         Scanner input = new Scanner(System.in);
         System.out.println("Informe o nome do filme a ser cadastrado: ");
         String nome = input.nextLine();
+<<<<<<< HEAD
         System.out.println("Informe o genero do filme a ser cadastrado: ");
         String genero = input.nextLine();
         System.out.println("Informe a classificação indicativa do filme a ser cadastrado: ");
         String classificacaoIndicativa = input.nextLine();
         System.out.println("Informe o ano de lançamento do filme a ser cadastrado: ");
         int anoLancamento = input.nextInt();
+=======
+        System.out.println("Informe o ano de lançamento do filme a ser cadastrado: ");
+        int anoLancamento = input.nextInt();
+        System.out.println("Informe o genero do filme a ser cadastrado: ");
+        String genero = input.nextLine();
+        System.out.println("Informe a classificação indicativa do filme a ser cadastrado: ");
+        int classificacaoIndicativa = input.nextInt();
+>>>>>>> main
 
             Filmes novofilme = new Filmes(nome, anoLancamento, genero, classificacaoIndicativa);
         
     }   
+<<<<<<< HEAD
+=======
+    public void main(String[] args){
+        
+        cadastroFilme();
+
+    }
+>>>>>>> main
 }
