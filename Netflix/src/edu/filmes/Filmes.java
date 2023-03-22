@@ -1,18 +1,18 @@
 package edu.filmes;
 import java.util.Scanner;
 
-class Filmes {
+public class Filmes {
     
     private String nome;
-    private int anoLancamento; 
+    private int anoLancamento;  
     private String genero;
-    private int classificacaoIndicativa;
+    private String classificacaoIndicativa;
 
     public Filmes(
         String nome,
         int anoLancamento,
         String genero,
-        int classificacaoIndicativa){
+        String classificacaoIndicativa){
             this.nome = nome;
             this.anoLancamento = anoLancamento;
             this.genero = genero;
@@ -38,29 +38,26 @@ class Filmes {
         this.genero = genero; 
     }
 
-    public int getClassificacaoIndicativa(){
+    public String getClassificacaoIndicativa(){
         return classificacaoIndicativa;
     }
-    public void setClassificacaoIndicativa(int classificacaoIndicativa){
+    public void setClassificacaoIndicativa(String classificacaoIndicativa){
         this.classificacaoIndicativa = classificacaoIndicativa; 
     }
 
-    public static void  cadastro(){
-        Scanner text = new Scanner(System.in);
-        System.out.println("Informe o nome do filme: ");
-        String nome = text.nextLine();
-        System.out.println("Informe o ano de lançamento: ");
-        String anoLancamento = text.nextLine();
-        System.out.println("Informe o genero: ");
-        String genero = text.nextLine();
-        System.out.println("Informe a classificação indicativa: ");
-        String classificacaoIndicativa = text.nextLine();
+    public static void cadastroFilme(){
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Informe o nome do filme a ser cadastrado: ");
+        String nome = input.nextLine();
+        System.out.println("Informe o genero do filme a ser cadastrado: ");
+        String genero = input.nextLine();
+        System.out.println("Informe a classificação indicativa do filme a ser cadastrado: ");
+        String classificacaoIndicativa = input.nextLine();
+        System.out.println("Informe o ano de lançamento do filme a ser cadastrado: ");
+        int anoLancamento = input.nextInt();
+
+            Filmes novofilme = new Filmes(nome, anoLancamento, genero, classificacaoIndicativa);
         
-        Filmes filme1 = new Filmes(nome,anoLancamento,genero,classificacaoIndicativa);
-
-    }
-    public static void main(String[] args){
-        cadastro();
-
-    }
+    }   
 }
