@@ -56,7 +56,7 @@ public class Profile {
 
   public String toString()
 	{
-		return ("O Nome é: " + this.name + "\nA Idade é: " + this.age + "\nO CPF é:  " + this.cpf + "\nO E-mail é: " + this.email + "\nO telefone é: " + this.phone);
+		return ("O Nome  informado foi: " + this.name + "\nA Idade informada foi: " + this.age + "\nO CPF informado foi:  " + this.cpf + "\nO E-mail informado foi: " + this.email + "\nO telefone informado foi: " + this.phone);
 	}
   public static void cadastro(){
     Scanner text = new Scanner(System.in);
@@ -71,6 +71,13 @@ public class Profile {
     String name = text.nextLine();
     System.out.println("Informe seu E-mail");
     String email =text.nextLine();
+    if(email.contains("@")){
+      System.out.println("Email cadastrado");
+    }else{
+      System.out.println("Informe um E-mail Valido");
+      email =text.nextLine();
+
+    }
     System.out.println("Informe um numero para contato");
     String phone = text.nextLine();
     if(phone.length()!= 12){
@@ -86,6 +93,4 @@ public class Profile {
     System.out.println(pessoa);
   }
   
-  public static void main(String[] args) {
-  }
 }
