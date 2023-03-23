@@ -1,13 +1,13 @@
 package edu.profile;
 import java.util.Scanner;
-
+//CRIAÇÃO DA CLASSE
 public class Profile {
   private String name;
   private int age;
   private String cpf;
   private String email;
   private String phone;
-
+  //CRIAÇÃO DO CONSTRUCTOR
   public Profile(
     String name,
     int age,
@@ -20,7 +20,7 @@ public class Profile {
       this.email = email;
       this.phone = phone;
   }
-
+  //METODOS GET E SET DA CLASSE
   public String getName(){
     return name;
   }
@@ -53,11 +53,12 @@ public class Profile {
   public void setPhone(String phone){
     this.phone = phone;
   }
-
+  //METODO DE ALTERAÇÃO DO OBJETO PARA STRING
   public String toString()
 	{
 		return ("O Nome  informado foi: " + this.name + "\nA Idade informada foi: " + this.age + "\nO CPF informado foi:  " + this.cpf + "\nO E-mail informado foi: " + this.email + "\nO telefone informado foi: " + this.phone);
 	}
+  //CRIAÇÃO DO METODO CADASTRO
   public static void cadastro(){
     Scanner text = new Scanner(System.in);
     System.out.println("== INICIANDO CADASTRO ==");

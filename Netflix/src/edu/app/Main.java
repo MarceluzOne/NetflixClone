@@ -3,6 +3,7 @@ import edu.profile.Profile;
 import edu.suporte.Suporte;
 import edu.filmes.Filme;
 
+//CRIAÇÃO DA CLASSE PRINCIPAL DO PROJETO
 class Main{
 
   public static void main(String[] args) {
@@ -19,7 +20,7 @@ class Main{
       System.out.println("0 - Sair");
 
       escolha = input.nextInt();
-
+      //CRIAÇÃO DO MENU PRINCIPAL
       switch(escolha) {
         case 1:
           System.out.println("Criando um novo Usuario");
@@ -35,7 +36,7 @@ class Main{
             Filme.cadastroFilme();
             break;
         case 4:
-            System.out.println("Opção 4 selecionada.");
+            System.out.println("Iniciar Pagamento.");
             break;
         case 0:
             System.out.println("Encerrando a plataforma");

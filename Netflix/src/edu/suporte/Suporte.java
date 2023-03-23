@@ -3,8 +3,7 @@ import java.util.Scanner;
 import edu.suporte.SolicitarFilme;
 import edu.suporte.SolicitarGenero;
 
-
-//classe
+//CRIAÇÃO DA CLASSE SUPORTE
 public class Suporte {
   protected SolicitarFilme filme;
   protected SolicitarGenero genero;
@@ -13,7 +12,7 @@ public class Suporte {
   private String sobreNetflix;
   private String sac;
 
-//construtor
+  //CRIAÇÃO DO CONSTRUCTOR
   private Suporte(
     String termosDeUso,
     String dicas,
@@ -25,23 +24,24 @@ public class Suporte {
       this.sac = sac;
   }
 
-    public String getTermosDeUso(){
-      return termosDeUso;
-    }
-    public void setTermosDeUso(String termosDeUso){
-      this.termosDeUso = termosDeUso;
-    }
+  //METODOS GET E SET DO SUPORTE
+  public String getTermosDeUso(){
+    return termosDeUso;
+  }
+  public void setTermosDeUso(String termosDeUso){
+    this.termosDeUso = termosDeUso;
+  }
   public String getdicas(){
     return dicas;
   }
   public void setdicas(String dicas){
-      this.dicas = dicas;
+    this.dicas = dicas;
   }
   public String getsobreNetflix(){
     return sobreNetflix;
   }
   public void setsobreNetflix(String sobreNetflix){
-      this.sobreNetflix = sobreNetflix;
+    this.sobreNetflix = sobreNetflix;
   }
   public String getsac(){
     return sac;
@@ -50,9 +50,8 @@ public class Suporte {
     this.sac = sac;
   }
 
-  //método
+  //METODO DA CLASSE SUPORTE
   public static void suporte(){
-    
     Scanner text = new Scanner(System.in);
 
     String genero = " ";
@@ -67,23 +66,21 @@ public class Suporte {
     int option;
 
     do{
-      System.out.println("\n--------------SUPORTE--------------\nBem vindo(a) ao Suporte Netflix!\n[1]Solicitar um novo filme/título\n[2]Termos de Uso\n[3]Dicas Netflix\n[4]Sobre a Netflix\n[5]SAC\n[6]Sair\n");
+      System.out.println("\n--------------SUPORTE--------------\nBem vindo(a) ao Suporte Netflix!\n[1]Solicitar um novo filme/título\n[2]Termos de Uso\n[3]Dicas Netflix\n[4]Sobre a Netflix\n[5]SAC\n[6]Voltar\n");
       System.out.println("\nSUA OPÇÃO: \n");
       option = scan.nextInt();
-
+      //CRIAÇÃO DO MENU
       switch(option){
         case 1 :
 
         SolicitarGenero.Genero();         
         genero = text.nextLine();
         SolicitarGenero genero1 = new SolicitarGenero(genero);
-
         SolicitarFilme.Filme();
         filme = text.nextLine();  
         SolicitarFilme filme1 = new SolicitarFilme(filme);
 
         System.out.println("\nTítulo selecionado: " + filme1.filme + "\nDo gênero: "+ genero1.genero + " \n--- Obrigada pela sugestão!");
-
           break;
         case 2: 
           System.out.println(termosDeUso);
@@ -98,7 +95,7 @@ public class Suporte {
           System.out.println(sac);
           break;
         case 6 :
-        System.out.println("----SUPORTE FECHADO----");
+        System.out.println("----SUPORTE ENCERRADO----");
         break;
         default :
           System.out.println("Opção inválida!");
@@ -106,11 +103,9 @@ public class Suporte {
   }
     while (option != 6);
     
-    //guardando as info
-    Suporte SUPORTE = new Suporte(termosDeUso,dicas,sobreNetflix,sac);
-  
-    //System.out.println(SUPORTE);
-}
+    //CRIAÇÃO DO OBJETO
+    Suporte SUPORTE = new Suporte(termosDeUso,dicas,sobreNetflix,sac);  
+  }
   public Suporte(){
   }
 
