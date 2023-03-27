@@ -37,6 +37,7 @@ class Main{
             break;
         case 4:
             System.out.println("Iniciar Pagamento.");
+            
             break;
         case 0:
             System.out.println("Encerrando a plataforma");

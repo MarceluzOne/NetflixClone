@@ -77,7 +77,6 @@ public class Profile {
     }else{
       System.out.println("Informe um E-mail Valido");
       email =text.nextLine();
-
     }
     System.out.println("Informe um numero para contato");
     String phone = text.nextLine();
