@@ -2,40 +2,25 @@ import java.util.Scanner;
 
 //CLASSE
 class Assinatura{
-	private String cartao;
+	private String tipoPagamento;
 	private String dataPagamento;
-	private String pix;
 	private String plano;
 
 	//CONSTRUCTOR
 	public Assinatura(
-		String cartao,
+		String pagamento,
 		String dataPagamento,
-		String pix,
 		String plano){
-			this.cartao = cartao;
+			this.tipoPagamento = pagamento;
 			this.dataPagamento = dataPagamento;
-			this.pix = pix;
 			this.plano = plano;
 	}
 
-	public String getCartao(){
-    return cartao;
-  }
-  public void setName(String cartao){
-    this.cartao = cartao;
-  }
 	public String getDataPagamento(){
     return dataPagamento;
   }
   public void setDataPagamento(String dataPagamento){
     this.dataPagamento = dataPagamento;
-  }
-	public String getPix(){
-    return pix;
-  }
-  public void setpix(String pix){
-    this.pix = pix;
   }
 	public String getPlano(){
     return plano;
@@ -49,6 +34,7 @@ class Assinatura{
 		boolean option;
 		System.out.println("Escolha um Menu");
 		int escolha = input.nextInt();
+
 		if (escolha ==1){
 			option = true;
 		}if (escolha ==2){
@@ -56,8 +42,6 @@ class Assinatura{
 		}if (escolha ==3){
 			option = true;
 		}else{option = false;}
-		
-		
 
 		do{
 			System.out.println("Escolha qual o melhor plano para você e sua familia\n 1 - Plano Básico com anúncio no valor de R$ 25,90\n 2 - Plano Padrão - R$ 39,90\n 3 - Plano Premium no valor de R$55,90");
@@ -91,6 +75,7 @@ class Assinatura{
 		String dataPagamento = input.nextLine();
 		System.out.println("O cartão inserido foi: " + cartao + "\nA melhor data de pagamento escolhida foi: " + dataPagamento);
 	}
+
 	public void cadastroAssinaturaPix(){
 		Scanner input = new Scanner(System.in);
 		String pix = "11558535256684";
