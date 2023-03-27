@@ -2,7 +2,7 @@ import java.util.Scanner;
 import edu.profile.Profile;
 import edu.suporte.Suporte;
 import edu.filmes.Filme;
-import edu.assinatura.Assinatura;
+
 
 //CRIAÇÃO DA CLASSE PRINCIPAL DO PROJETO
 class Main{
