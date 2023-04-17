@@ -1,4 +1,5 @@
-package edu.filmes;
+package edu.entidades;
+
 import java.util.Scanner;
 
 //CRIAÇÃO DA CLASSE
