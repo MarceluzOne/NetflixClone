@@ -1,3 +1,4 @@
+package edu.entidades;
 import java.util.Scanner;
 
 //CLASSE
