@@ -1,7 +1,7 @@
 import java.util.Scanner;
-import edu.profile.Profile;
+
+import edu.entidades.Filme;
 import edu.suporte.Suporte;
-import edu.filmes.Filme;
 
 
 //CRIAÇÃO DA CLASSE PRINCIPAL DO PROJETO
@@ -24,7 +24,7 @@ class Main{
       switch(escolha) {
         case 1:
           System.out.println("\nCriando um novo Usuario\n");
-          Profile.cadastro();
+          //Profile.cadastro();
           break;
         case 2:
           System.out.println("\nIniciando o Suporte\n");
@@ -37,7 +37,7 @@ class Main{
             break;
         case 4:
             System.out.println("\nIniciando Assinatura\n");
-            Assinatura.plano();
+            //Assinatura.plano();
             break;
         case 0:
             System.out.println("-----Encerrando a plataforma-----");
