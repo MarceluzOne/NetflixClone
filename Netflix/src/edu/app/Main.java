@@ -1,8 +1,9 @@
 import java.util.Scanner;
-import edu.profile.Profile;
-import edu.suporte.Suporte;
-import edu.filmes.Filmes;
 
+import edu.entidades.Filme;
+import edu.suporte.Suporte;
+
+//CRIAÇÃO DA CLASSE PRINCIPAL DO PROJETO
 class Main{
 
   public static void main(String[] args) {
@@ -19,11 +20,11 @@ class Main{
       System.out.println("0 - Sair");
 
       escolha = input.nextInt();
-
+      //CRIAÇÃO DO MENU PRINCIPAL
       switch(escolha) {
         case 1:
           System.out.println("Criando um novo Usuario");
-          Profile.cadastro();
+          //Profile.cadastro();
           break;
         case 2:
           System.out.println("Iniciando o Suporte");
@@ -32,10 +33,11 @@ class Main{
           break;
         case 3:
             System.out.println("Iniciando Cadastro de Filme");
-            Filmes.cadastroFilme();
+            Filme.cadastroFilme();
             break;
         case 4:
-            System.out.println("Opção 4 selecionada.");
+            System.out.println("Iniciar Pagamento.");
+            
             break;
         case 0:
             System.out.println("Encerrando a plataforma");
