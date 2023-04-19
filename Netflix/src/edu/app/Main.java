@@ -11,7 +11,7 @@ class Main{
 
 
   public static void main(String[] args ){
-    Cliente cliente1 =new Cliente("Marcelo", "083.751.884-92",null );
+    Cliente cliente1 =new Cliente("Marcelo", "083.751.884-92",null);
     ClienteRepositorio banco = new ClienteRepositorio();
     boolean salvar;
     salvar = banco.salvarCliente(cliente1);
