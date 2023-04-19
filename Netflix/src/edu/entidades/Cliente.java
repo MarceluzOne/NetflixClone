@@ -22,5 +22,4 @@ public class Cliente extends Pessoa{
   public void setTipoDeCliente(String tipoDeCliente) {
     this.tipoDeCliente = tipoDeCliente;
   }
-
 }
