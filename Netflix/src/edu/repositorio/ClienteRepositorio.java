@@ -2,30 +2,28 @@ package edu.repositorio;
 import java.util.ArrayList;
 import edu.entidades.Cliente;
 
-public class ClienteRepositorio {
-  public ArrayList<Cliente> listaCliente;
-  public int idCliente = 0;
+  public class ClienteRepositorio implements IClienteRepositorio {
 
-  public ClienteRepositorio(ArrayList<Cliente> listaCliente){
-    this.listaCliente = listaCliente;
-  }
-  public void cadastrar(Cliente cliente){
-    listaCliente.add(cliente);
-  }
-  public ArrayList<Cliente> listarPorNome(String nome){
-    ArrayList<Cliente> listadeCliente = new ArrayList<Cliente>();
-    for(Cliente cliente :listadeCliente){
-      if(cliente.getName().equals(nome))
-      listaCliente.add(cliente);
+    public ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
+    
+    // public ClienteRepositorio(ArrayList<Cliente> listaClientes){
+    //   this.listaClientes = listaClientes;
+    // }
+    public boolean salvarCliente(Cliente name){
+        listaClientes.add(name);
+        return true;
     }
-    return listadeCliente;
-  }
-  public void atualizar(Cliente cliente, int index){
-    listaCliente.add(index,cliente);
-  }
-  public void  deletar(Cliente cliente) {
-		listaCliente.remove(cliente);
-	}
+    public boolean atualizarCliente(Cliente cliente){
+      return true;
+    }
+    public boolean deletarCliente(Cliente cliente){
+      listaClientes.remove(cliente);
+      return true;
+    }
+    public ArrayList<Cliente> listarCliente(String name){
+      return listaClientes;
+      
+    }
 
 
 
