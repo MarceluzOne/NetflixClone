@@ -22,11 +22,11 @@ public class Assinatura {
 		this.formaPagamento = formaPagamento;
 	}
 
-	public String getPlano() {
+	public String getplano() {
 		return plano;
 	}
 
-	public void setPlano(String plano) {
+	public void setplano(String plano) {
 		this.plano = plano;
 	}
 
