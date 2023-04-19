@@ -9,6 +9,7 @@ public interface IAdministrador {
   public boolean cadastrarAdministrador(Administrador name);
   public boolean deletarAdministrador();
   public ArrayList<Administrador> listarAdministrador();
-  public boolean atualizarCliente(Administrador name);
+  public boolean atualizarAdministrador(Administrador name);
+  public boolean validarAdministrador(ArrayList<Administrador> listaAdministrador, Administrador name);
 
 }
