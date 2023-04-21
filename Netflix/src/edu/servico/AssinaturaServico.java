@@ -9,7 +9,7 @@ public class AssinaturaServico {
 
     public static void planoPagamento(){
 
-        System.out.println("Escolha qual o melhor plano para você e sua família:\n[1] - Plano Básico com anúncio no valor de R$ 25,90(Somente uma tela permitida)\n[2] - Plano Padrão - R$ 39,90(Assista em até 2 aparelhos ao mesmo tempo!)\n[3] - Plano Premium no valor de R$55,90(Assista em até 4 aparelhos ao mesmo tempo!)\n");
+        System.out.println("Escolha qual o melhor plano para você e sua família:\n[BASICO] - Plano Básico com anúncio no valor de R$ 25,90(Somente uma tela permitida)\n[PADRAO] - Plano Padrão - R$ 39,90(Assista em até 2 aparelhos ao mesmo tempo!)\n[PREMIUM] - Plano Premium no valor de R$55,90(Assista em até 4 aparelhos ao mesmo tempo!)\n");
         Scanner entrada = new Scanner(System.in);
 
 		String formaPagamento ;
@@ -19,44 +19,44 @@ public class AssinaturaServico {
 
 		switch (plano) {
             case "BASICO":
-            System.out.println("Plano Básico escolhido");
+            System.out.println("Plano Básico escolhido\n");
             break;
             
 			case "PADRAO": 
-            System.out.println("Plano Padrão escolhido");
+            System.out.println("Plano Padrão escolhido\n");
             break;
             
 			case "PREMIUM":
-            System.out.println("Plano Premium ESCOLHIDO");
+            System.out.println("Plano Premium escolhido\n");
             break;
             
 			default:
-            System.out.println("OPÇÃO INVÁLIDA!");
+            System.out.println("OPÇÃO INVÁLIDA!\n");
             
 		}
-        System.out.println("Escolha a forma de pagameto :\n[1] - CRÉDITO\n[2] - DÉBITO\n[3] - PIX\n[4] -  BOLETO ");
+        System.out.println("Escolha a forma de pagameto :\nCREDITO\nDEBITO\nPIX\nBOLETO \n");
 		formaPagamento = entrada.nextLine().toUpperCase();
         
         
 		switch (formaPagamento) {
 			case "CREDITO":
-				System.out.println("Credito escolhido");
+				System.out.println("CRÉDITO ESCOLHIDO\n");
 				break;
 
 			case "DEBITO": 
-				System.out.println("Debito escolhido");
+				System.out.println("DÉBITO ESCOLHIDO\n");
 				break;
                 
                 case "PIX":
-				System.out.println("PIX ESCOLHIDO");
+				System.out.println("PIX ESCOLHIDO\n");
 				break;
                 
                 case "BOLETO":
-				System.out.println("BOLETO ESCOLHIDO");
+				System.out.println("BOLETO ESCOLHIDO\n");
 				break;
 
 			default:
-            System.out.println("OPÇÃO INVÁLIDA!");
+            System.out.println("OPÇÃO INVÁLIDA!\n");
 		}
 
         Assinatura pf = new Assinatura(plano, formaPagamento);
