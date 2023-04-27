@@ -26,7 +26,7 @@ public class AssinaturaRepositorio implements IAssinatura {
         }
       return false;
     }
-
+// tudo isso vai ficar em serviços
     public boolean atualizarFormaPagamento(Assinatura assinatura){
         for (Assinatura assinatura2 : listaAssinaturas){
             if(assinatura2.getformaPagamento() == assinatura.getformaPagamento()){
