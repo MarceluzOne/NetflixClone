@@ -11,9 +11,10 @@ public class Administrador implements IAdministrador {
         this.listaAdministrador = listaAdministrador;
     }
 
-    public @Override
-    public boolean validarAdministrador(edu.entidades.Administrador name) {
-        // TODO Auto-generated method stub
+    public boolean validarAdministrador(ArrayList<Administrador> listaAdministrador, Administrador name) {
+        if((name)){
+            return true;
+        }
         return false;
     }
 }

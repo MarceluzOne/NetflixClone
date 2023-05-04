@@ -70,7 +70,7 @@ class Assinatura{
 
 	public void cadastroAssinaturaCredito(){
 		Scanner input = new Scanner(System.in);
-		System.out.println("Qual os dados do cartão a serem cadastrado");
+		System.out.println("Insira dos dados do cartão a ser cadastrado: ");
 		String cartao =input.nextLine();
 		System.out.println("Informe a melhor data de Pagamento");
 		String dataPagamento = input.nextLine();

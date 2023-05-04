@@ -1,7 +1,5 @@
 package edu.entidades;
 
-import java.util.Scanner;
-
 //CRIAÇÃO DA CLASSE
 public class Filme{
     
@@ -12,13 +10,9 @@ public class Filme{
   //CRIAÇÃO DO CONSTRUCTOR
   public Filme(
     String nome,
-    int anoLancamento,
-    String genero,
-    String classificacaoIndicativa){
-      this.nome = nome;
+    int anoLancamento)
+    {this.nome = nome;
       this.anoLancamento = anoLancamento;
-      this.genero = genero;
-      this.classificacaoIndicativa = classificacaoIndicativa;
   }
   //METODOS GET E SET
   public String getNome(){
@@ -50,20 +44,6 @@ public class Filme{
   public String toString(){
 		return ("O filme cadastrado foi: " + this.nome + "\nO genero informado foi " + this.genero + "\nA classificação do filme é: " + this.classificacaoIndicativa + "\nO ano de lançamento foi: " + this.anoLancamento);
 	}
-    //CRIAÇÃO DO METODO DE CADASTRO DE NOVOS FILMES
-    public static void cadastroFilme(){
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Informe o nome do filme a ser cadastrado: ");
-        String nome = input.nextLine();
-        System.out.println("Informe o genero do filme a ser cadastrado: ");
-        String genero = input.nextLine();
-        System.out.println("Informe a classificação indicativa do filme a ser cadastrado: ");
-        String classificacaoIndicativa = input.nextLine();
-        System.out.println("Informe o ano de lançamento do filme a ser cadastrado: ");
-        int anoLancamento = input.nextInt();
-
-        Filme novofilme = new Filme(nome, anoLancamento, genero, classificacaoIndicativa);
-    }   
+    
 }
 
