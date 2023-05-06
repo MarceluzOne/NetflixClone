@@ -19,17 +19,17 @@ public class AssinaturaRepositorio implements IAssinatura {
 
     public boolean atualizarPlano(Assinatura assinatura){
         for (Assinatura assinatura2 : listaAssinaturas){
-            if(assinatura2.getplano() == assinatura.getplano()){
+            if(assinatura2.getplano().equals(assinatura.getplano())){
                 listaAssinaturas.remove(assinatura2);
                 listaAssinaturas.add(assinatura);
             }
         }
       return false;
     }
-// tudo isso vai ficar em serviços
+
     public boolean atualizarFormaPagamento(Assinatura assinatura){
         for (Assinatura assinatura2 : listaAssinaturas){
-            if(assinatura2.getformaPagamento() == assinatura.getformaPagamento()){
+            if(assinatura2.getformaPagamento().equals(assinatura.getformaPagamento())){
                 listaAssinaturas.remove(assinatura2);
                 listaAssinaturas.add(assinatura);
             }
@@ -39,7 +39,7 @@ public class AssinaturaRepositorio implements IAssinatura {
 
     public boolean deletarAssinatura(String plano){
         for (Assinatura assinatura : listaAssinaturas){
-            if(assinatura.getplano() == plano){
+            if(assinatura.getplano().equals(plano)){
                 listaAssinaturas.remove(assinatura);
             }
         }
