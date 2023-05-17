@@ -74,6 +74,9 @@ public class AssinaturaServico {
             System.out.println("--------------------------------------------------------");
         }
     }
+    public static void dados(){
+        
+    }
 
     public static void main(String[]args) {
         planoPagamento();

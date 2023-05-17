@@ -37,6 +37,15 @@ public class AssinaturaRepositorio implements IAssinatura {
         return false;
 }
 
+    public boolean atualizarDados(Assinatura assinatura){
+        for (Assinatura assinatura2 : listaAssinaturas){
+            if(assinatura2.getdados().equals(assinatura.getdados())){
+                assinatura2 = assinatura;
+            }
+        }
+        return false;
+    }
+
     public boolean deletarAssinatura(String plano){
         for (Assinatura assinatura : listaAssinaturas){
             if(assinatura.getplano().equals(plano)){
