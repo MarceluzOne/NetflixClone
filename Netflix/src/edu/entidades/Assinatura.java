@@ -11,7 +11,6 @@ public class Assinatura  {
         this.formaPagamento = formaPagamento;
 	}
 
-
     public String getplano() {
 		return plano;
 	}

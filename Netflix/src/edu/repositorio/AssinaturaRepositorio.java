@@ -20,8 +20,7 @@ public class AssinaturaRepositorio implements IAssinatura {
     public boolean atualizarPlano(Assinatura assinatura){
         for (Assinatura assinatura2 : listaAssinaturas){
             if(assinatura2.getplano().equals(assinatura.getplano())){
-                listaAssinaturas.remove(assinatura2);
-                listaAssinaturas.add(assinatura);
+                assinatura2 = assinatura;
             }
         }
       return false;
@@ -30,8 +29,7 @@ public class AssinaturaRepositorio implements IAssinatura {
     public boolean atualizarFormaPagamento(Assinatura assinatura){
         for (Assinatura assinatura2 : listaAssinaturas){
             if(assinatura2.getformaPagamento().equals(assinatura.getformaPagamento())){
-                listaAssinaturas.remove(assinatura2);
-                listaAssinaturas.add(assinatura);
+                assinatura2 = assinatura;
             }
         }
         return false;
