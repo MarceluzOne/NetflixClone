@@ -10,7 +10,6 @@ import edu.entidades.Cliente;
         return true;
     }
     public boolean atualizarCliente(Cliente cliente){
-
       return true;
     }
     public boolean deletarCliente(Cliente cliente){

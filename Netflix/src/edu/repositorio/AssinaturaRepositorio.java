@@ -23,7 +23,7 @@ public class AssinaturaRepositorio implements IAssinatura {
                 assinatura2 = assinatura;
             }
         }
-      return false;
+    return false;
     }
 
     public boolean atualizarFormaPagamento(Assinatura assinatura){
@@ -54,8 +54,7 @@ public class AssinaturaRepositorio implements IAssinatura {
     }
 
     public ArrayList<Assinatura> listarAssinatura(){
-      return this.listaAssinaturas;
-      
+    return this.listaAssinaturas;
     }
 
 }
