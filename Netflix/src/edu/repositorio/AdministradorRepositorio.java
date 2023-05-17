@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import edu.entidades.Administrador;
 
 public class AdministradorRepositorio implements IAdministrador {
-    public ArrayList<Administrador> listaAdministrador = new ArrayList<Administrador>();
+	public ArrayList<Administrador> listaAdministrador = new ArrayList<Administrador>();
 
     public boolean cadastrarAdministrador(Administrador name){
         listaAdministrador.add(name);
