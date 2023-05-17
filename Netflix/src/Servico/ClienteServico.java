@@ -1,6 +1,7 @@
 package Servico;
 import Exceptions.CpfInvalidoException;
 import edu.entidades.Cliente;
+import edu.repositorio.ClienteRepositorio;
 import Exceptions.NomeInvalidoException;
 
 public class ClienteServico {
@@ -15,6 +16,8 @@ public class ClienteServico {
         }
         if (cliente.getName().length() < 20){
             throw new NomeInvalidoException();
+        }else{
+            ClienteRepositorio().salvarCliente()
         }
     } catch (CpfInvalidoException ex){
         System.out.println("Seu CPF está incorreto.");
