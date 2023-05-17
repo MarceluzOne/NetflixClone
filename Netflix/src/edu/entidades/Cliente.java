@@ -10,6 +10,9 @@ public class Cliente extends Pessoa{
     super(name, cpf);
     this.dataDeCadastro = dataDeCadastro;
   }
+  public Cliente(String name, String cpf){
+    super(name, cpf);
+  }
   public Date getDataDeCadastro() {
     return dataDeCadastro;
   }
