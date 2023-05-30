@@ -1,30 +1,39 @@
-package edu.repositorio;
+package edu.Repositorio;
 
-import java.security.PublicKey;
 import java.util.ArrayList;
 
 import edu.entidades.Administrador;
 
-public class AdministradorRepositorio implements IAdministrador {
+public class AdministradorRepositorio implements IAdministrador  {
 
-    public ArrayList<AdministradorRepositorio> listaAdministrador = new ArrayList<AdministradorRepositorio>();
+    public ArrayList<AdministradorRepositorio> listaAdministrador;
 
     public AdministradorRepositorio(ArrayList<AdministradorRepositorio> listaAdministrador){
         this.listaAdministrador = listaAdministrador;
     }
 
-    public boolean validarAdministrador(ArrayList<AdministradorRepositorio> listaAdministrador, AdministradorRepositorio name) {
-        if((name)){
-            return true;
-        }
-        return false;
+
+    public void cadastrarAdministrador( AdministradorRepositorio name){
+        listaAdministrador.add(name);
     }
-    public boolean deletarAdministrador(Administrador administrador){
-        listarAdministrador.remove(administrador);
-        true
+    //LER
+    public ArrayList<AdministradorRepositorio> listarAdministrador(){
+        return listaAdministrador;
     }
-    public ArrayList<listaAdministrador> listarAdministrador(String name){
-        return ;
-        
+
+    //DELETAR
+    public void deletarAdministrador(ArrayList<AdministradorRepositorio> listaAdministrador, AdministradorRepositorio name){
+        listaAdministrador.remove(name);
     }
+    // MODIFICAR
+
+    public void atualizarAdministrador( AdministradorRepositorio name, int index){
+        listaAdministrador.add(index, name);
+    }
+
+    public Administrador buscarAdministrador(Administrador administrador){
+        listaAdministrador.contains(administrador);
+        return administrador;
+    }
+
 }

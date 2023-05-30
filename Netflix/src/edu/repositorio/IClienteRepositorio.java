@@ -1,4 +1,4 @@
-package edu.repositorio;
+package edu.Repositorio;
 
 import java.util.ArrayList;
 
@@ -6,10 +6,10 @@ import edu.entidades.Cliente;
 
 public interface IClienteRepositorio {
   
-  public boolean salvarCliente(Cliente cliente);
+  public void salvarCliente(Cliente cliente);
   public ArrayList<Cliente> listarCliente(String cliente);
-  public boolean deletarCliente(Cliente cliente);
-  public boolean atualizarCliente(Cliente cliente);
+  public void deletarCliente(Cliente cliente);
+  public void atualizarCliente(Cliente cliente, int index);
 
   
 }

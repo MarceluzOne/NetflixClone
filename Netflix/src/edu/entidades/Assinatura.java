@@ -1,5 +1,4 @@
 package edu.entidades;
-import java.util.Scanner;
 
 //CLASSE
 public class Assinatura  {
