@@ -4,35 +4,31 @@ import java.util.ArrayList;
 
 import edu.entidades.Administrador;
 
-public class AdministradorRepositorio implements IAdministrador  {
+public class AdministradorRepositorio   {
 
-    public ArrayList<AdministradorRepositorio> listaAdministrador;
-
-    public AdministradorRepositorio(ArrayList<AdministradorRepositorio> listaAdministrador){
-        this.listaAdministrador = listaAdministrador;
-    }
+    public ArrayList<Administrador> listaAdministrador = new ArrayList<Administrador>();
 
 
-    public void cadastrarAdministrador( AdministradorRepositorio name){
-        listaAdministrador.add(name);
+    public void cadastrarAdministrador( Administrador administrador){
+        listaAdministrador.add(administrador);
     }
     //LER
-    public ArrayList<AdministradorRepositorio> listarAdministrador(){
+    public ArrayList<Administrador> listarAdministrador(){
         return listaAdministrador;
     }
 
     //DELETAR
-    public void deletarAdministrador(ArrayList<AdministradorRepositorio> listaAdministrador, AdministradorRepositorio name){
+    public void deletarAdministrador(ArrayList<Administrador> listaAdministrador, Administrador name){
         listaAdministrador.remove(name);
     }
     // MODIFICAR
 
-    public void atualizarAdministrador( AdministradorRepositorio name, int index){
+    public void atualizarAdministrador( Administrador name, int index){
         listaAdministrador.add(index, name);
     }
 
     public Administrador buscarAdministrador(Administrador administrador){
-        listaAdministrador.contains(administrador);
+        listaAdministrador.contains(administrador.getName());
         return administrador;
     }
 
