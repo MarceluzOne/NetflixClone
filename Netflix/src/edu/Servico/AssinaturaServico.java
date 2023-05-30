@@ -21,20 +21,8 @@ Scanner entrada = new Scanner(System.in);
     throw new RuntimeException("Cartão cadastrado");
 }
 else if ( dados.length() < 16){
-    System.out.println("Os números do seu cartão precisa ter mais de 16 dígitos.\n");
-}}
-
-
-    public static void listarAssinaturas(){
-        ArrayList<Assinatura> lista = new ArrayList<Assinatura>();
-
-        lista = ar.listarAssinatura();
-
-        for (Assinatura assinatura: lista){
-            System.out.println("PLANO É : " + assinatura.getplano());
-            System.out.println("FORMA DE PAGAMENTO É: " + assinatura.getformaPagamento());
-            System.out.println("--------------------------------------------------------");
-        }
+    throw new RuntimeException("Os números do seu cartão precisa ter mais de 16 dígitos.\n");
+}
 }
 }
 

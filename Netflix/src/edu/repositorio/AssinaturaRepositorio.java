@@ -53,7 +53,7 @@ public class AssinaturaRepositorio implements IAssinatura {
     }
 
     public ArrayList<Assinatura> listarAssinatura(){
-    return this.listaAssinaturas;
+        return this.listaAssinaturas;
     }
 
 }
