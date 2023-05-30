@@ -1,21 +1,21 @@
-// package edu.Servico;
-// import Exceptions.AnodelancamentoInvalidoException;
-// import edu.entidades.Filme;
-// import Exception.AnodelancamentoInvalidoException;
+package edu.Servico;
+import Exceptions.AnodelancamentoInvalidoException;
+import edu.entidades.Filme;
+import Exception.AnodelancamentoInvalidoException;
 
-// public class FilmeServico {
+public class FilmeServico {
     
-//     public void cadastrar(FilmeServico anodelancamento){
+    public void cadastrar(Filme filme){
 
-//         try{
+        try{
 
-//         if(anodelancamento.getAnodelancamento().length() < 4){
-//             throw new AnodelancamentoInvalidoException();
-//         }
+        if(filme.anoLancamento() < 4){
+            throw new AnodelancamentoInvalidoException();
+        }
 
-//         } catch (AnodelancamentoInvalidoException ex){
-//             System.out.println("O ano de lançamento está incorreto!")
-//         }
-//     }
+        } catch (AnodelancamentoInvalidoException ex){
+            System.out.println("O ano de lançamento está incorreto!");
+        }
+    }
 
-// }
+}
