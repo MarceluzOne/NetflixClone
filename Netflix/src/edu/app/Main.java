@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
-
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.CloseAction;
-
+import java.util.ArrayList;
 import edu.Servico.AssinaturaServico;
 import edu.Servico.ClienteServico;
 import edu.entidades.Assinatura;
@@ -17,11 +16,11 @@ import edu.suporte.Suporte;
 class Main{
 
 public static AssinaturaRepositorio ar = new AssinaturaRepositorio();
-ArrayList<Assinatura> lista = new ArrayList<Assinatura>();
 
 public static void planoP() {
-
+  ArrayList<Assinatura> lista = new ArrayList<Assinatura>();
   
+    try{
   System.out.println("Escolha qual o melhor plano para você e sua família:\n[BASICO] - Plano Básico com anúncio no valor de R$ 25,90(Somente uma tela permitida)\n[PADRAO] - Plano Padrão - R$ 39,90(Assista em até 2 aparelhos ao mesmo tempo!)\n[PREMIUM] - Plano Premium no valor de R$55,90(Assista em até 4 aparelhos ao mesmo tempo!)\n");
   Scanner entrada = new Scanner(System.in);
   
@@ -46,9 +45,7 @@ public static void planoP() {
     planoP();
     break;
   }
-
-  try{
-  String dados="";
+  String dados = ""; 
   System.out.println("Escolha a forma de pagameto :\nCREDITO\nDEBITO\nPIX\nBOLETO \n");
   String formaPagamento;
   formaPagamento = entrada.nextLine().toUpperCase();
@@ -78,16 +75,27 @@ public static void planoP() {
     break;
   }
   
-  AssinaturaRepositorio ar = new AssinaturaRepositorio();
   Assinatura pf = new Assinatura(plano, formaPagamento, dados);
   ar.salvarAssinatura(pf);
-    
+
 }catch(RuntimeException e){
   System.out.println(e.getMessage());
-} 
-}
+} }
+
+
+public static void listarAssinaturas(){
+  ArrayList<Assinatura> lista = new ArrayList<Assinatura>();
+
+  lista = ar.listarAssinatura();
+
+  for (Assinatura assinatura: lista){
+      System.out.println("PLANO É : " + assinatura.getplano());
+      System.out.println("FORMA DE PAGAMENTO É: " + assinatura.getformaPagamento());
+      System.out.println("--------------------------------------------------------");
+  }}
   
 public static void main(String[] args ){
-planoP();
+  planoP();
+  listarAssinaturas();
 }
 }

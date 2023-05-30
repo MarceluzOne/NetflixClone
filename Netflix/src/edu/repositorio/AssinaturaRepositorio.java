@@ -1,5 +1,7 @@
 package edu.repositorio;
 import java.util.ArrayList;
+
+import edu.Servico.AssinaturaServico;
 import edu.entidades.Assinatura;
 
 public class AssinaturaRepositorio implements IAssinatura {
