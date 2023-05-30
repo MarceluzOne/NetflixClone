@@ -3,10 +3,11 @@ package edu.Repositorio;
 
 import java.util.ArrayList;
 
-public interface IAdministrador {
-  public void cadastrarAdministrador();
-  public ArrayList<AdministradorRepositorio> listarAdministrador();
-  public void deletarAdministrador();
-  public void atualizarAdministrador();
+import edu.entidades.Administrador;
 
+public interface IAdministrador {
+  public void cadastrarAdministrador(Administrador administrador);
+  public ArrayList<Administrador> listarAdministrador();
+  public void deletarAdministrador(ArrayList<Administrador> listaAdministrador, Administrador name);
+  public Administrador buscarAdministrador(Administrador administrador);
 }

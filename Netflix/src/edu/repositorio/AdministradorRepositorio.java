@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import edu.entidades.Administrador;
 
-public class AdministradorRepositorio   {
+public class AdministradorRepositorio implements IAdministrador  {
 
     public ArrayList<Administrador> listaAdministrador = new ArrayList<Administrador>();
 
@@ -28,7 +28,7 @@ public class AdministradorRepositorio   {
     }
 
     public Administrador buscarAdministrador(Administrador administrador){
-        listaAdministrador.contains(administrador.getName());
+        //listaAdministrador.contains(administrador.getName());
         return administrador;
     }
 
