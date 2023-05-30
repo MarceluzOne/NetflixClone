@@ -1,3 +1,4 @@
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -16,8 +17,7 @@ import edu.suporte.Suporte;
 class Main{
 
 public static AssinaturaRepositorio ar = new AssinaturaRepositorio();
-
-public static void planoP() {
+public static void cadastroPlano() {
   ArrayList<Assinatura> lista = new ArrayList<Assinatura>();
   
     try{
@@ -42,14 +42,14 @@ public static void planoP() {
     
     default:
     System.out.println("OPÇÃO INVÁLIDA!\n");
-    planoP();
+    cadastroPlano();
     break;
   }
-  String dados = ""; 
+   
   System.out.println("Escolha a forma de pagameto :\nCREDITO\nDEBITO\nPIX\nBOLETO \n");
   String formaPagamento;
   formaPagamento = entrada.nextLine().toUpperCase();
-  
+
   switch (formaPagamento) {
     case "CREDITO":
     System.out.println("CRÉDITO ESCOLHIDO\n");
@@ -71,7 +71,7 @@ public static void planoP() {
     
     default:
     System.out.println("OPÇÃO INVÁLIDA!\n");
-    planoP();
+    cadastroPlano();
     break;
   }
   
@@ -81,7 +81,6 @@ public static void planoP() {
 }catch(RuntimeException e){
   System.out.println(e.getMessage());
 } }
-
 
 public static void listarAssinaturas(){
   ArrayList<Assinatura> lista = new ArrayList<Assinatura>();
@@ -95,7 +94,7 @@ public static void listarAssinaturas(){
   }}
   
 public static void main(String[] args ){
-  planoP();
+  cadastroPlano();
   listarAssinaturas();
 }
 }

@@ -14,7 +14,7 @@ private static AssinaturaRepositorio ar = new AssinaturaRepositorio();
 
 public static void numerosCartao() {
 
-String dados="";
+String dados;
 Scanner entrada = new Scanner(System.in);
     dados = entrada.nextLine().toUpperCase();
     if (dados.length() >= 16){
