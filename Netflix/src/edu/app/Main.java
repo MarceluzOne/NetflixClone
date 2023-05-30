@@ -47,6 +47,8 @@ public static void cadastroPlano() {
   }
    
   System.out.println("Escolha a forma de pagameto :\nCREDITO\nDEBITO\nPIX\nBOLETO \n");
+  
+  String dados ="";
   String formaPagamento;
   formaPagamento = entrada.nextLine().toUpperCase();
 
@@ -74,7 +76,6 @@ public static void cadastroPlano() {
     cadastroPlano();
     break;
   }
-  
   Assinatura pf = new Assinatura(plano, formaPagamento, dados);
   ar.salvarAssinatura(pf);
 

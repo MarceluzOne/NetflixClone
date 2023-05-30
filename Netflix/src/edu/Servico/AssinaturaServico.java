@@ -6,6 +6,7 @@ import java.util.Scanner;
 import edu.Servico.*;
 import javax.management.RuntimeErrorException;
 import edu.*;
+import edu.Exceptions.CartaoInvalidoException;
 
 
 public class AssinaturaServico {

@@ -9,13 +9,7 @@ public class AssinaturaRepositorio implements IAssinatura {
     public ArrayList<Assinatura> listaAssinaturas = new ArrayList<Assinatura>();
     
     public boolean salvarAssinatura(Assinatura assinatura){
-        try{
-        listaAssinaturas.add(assinatura);
-        } catch(Exception e){
-        return false;
-        }
-
-        return true;
+        return listaAssinaturas.add(assinatura);
     }
 
     public boolean atualizarPlano(Assinatura assinatura){
