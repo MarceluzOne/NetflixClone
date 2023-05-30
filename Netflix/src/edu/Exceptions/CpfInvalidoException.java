@@ -1,4 +1,4 @@
-package Exceptions;
+package edu.Exceptions;
 
 public class CpfInvalidoException extends Exception{
 

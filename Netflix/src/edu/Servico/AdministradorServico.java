@@ -1,4 +1,4 @@
-package Servico;
+package edu.Servico;
 
 import Exceptions.NomeInvalidoException;
 import edu.entidades.Administrador;

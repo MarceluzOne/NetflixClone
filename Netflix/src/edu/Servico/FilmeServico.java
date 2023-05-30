@@ -1,4 +1,4 @@
-package Servico;
+package edu.Servico;
 import Exceptions.AnodelancamentoInvalidoException;
 import edu.entidades.Filme;
 import Exception.AnodelancamentoInvalidoException;

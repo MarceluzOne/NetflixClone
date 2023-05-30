@@ -1,4 +1,6 @@
-package Servico;
+package edu.Servico;
+
+import edu.Servico.AssinaturaServico;
 import Exceptions.CpfInvalidoException;
 import edu.entidades.Cliente;
 import edu.repositorio.ClienteRepositorio;
