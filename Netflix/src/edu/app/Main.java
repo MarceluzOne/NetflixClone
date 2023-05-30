@@ -21,29 +21,21 @@ class Main{
     
     AdministradorServico admservicos = new AdministradorServico();
 
-    AdministradorRepositorio admrepo = new AdministradorRepositorio();
 
     Administrador administrador1 = new Administrador("Marcelo Arruda", "083.751.884-92");
     Administrador administrador2 = new Administrador("Thially", "083.751.884-92");
     Administrador administrador3 = new Administrador("Larissa", "083.751.884-92");
-    Cliente cliente = new Cliente("Marcelo Junior", null);
+  
 
     admservicos.cadastrarAdministrador(administrador1);
     admservicos.cadastrarAdministrador(administrador2);
     admservicos.cadastrarAdministrador(administrador3);
 
     System.out.println(administrador1);
-    System.out.println(administrador2);
-    System.out.println(administrador3);
+    // System.out.println(administrador2);
+    // System.out.println(administrador3);
 
-    System.out.println(admrepo.listarAdministrador());
+    System.out.println(admservicos.listarAdm());
 
-   
-  
-
-    
-
-    
     }
-  
   }

@@ -1,20 +1,27 @@
 package edu.Servico;
 
+import java.util.ArrayList;
+
 import edu.Exceptions.NomeErroException;
+import edu.Repositorio.AdministradorRepositorio;
 import edu.entidades.Administrador;
 
 public class AdministradorServico {
+  AdministradorRepositorio admservico = new AdministradorRepositorio();
   
   public void cadastrarAdministrador(Administrador administrador) throws NomeErroException{
+
     try {
-      if(!administrador.getName().isBlank() &&
-      !administrador.getName().isEmpty()){
+      if(administrador.getName().isEmpty()){
+        System.out.println("teste cadastro is empty");
         throw new NomeErroException();
       }else{
-        cadastrarAdministrador(administrador);
+        System.out.println("Cadastrar ADm serviço");
+        admservico.cadastrarAdministrador(administrador);
       }
     } catch (NomeErroException e) {
       e.getMessege(administrador.getName());
+      System.out.println("test catch cadastro");
       
     }
 }
@@ -39,6 +46,12 @@ public void alterarAdministrador(Administrador administrador){
     e.getMessege(administrador.getEmail());
   }
 
+  
 
+
+}
+
+public ArrayList<Administrador> listarAdm(){
+  return admservico.listarAdministrador();
 }
 }
