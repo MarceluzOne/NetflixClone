@@ -1,19 +1,20 @@
 package edu.entidades;
 
-import java.util.Date;
-
 public class Cliente extends Pessoa{
-  Date dataDeCadastro;
+  String dataDeCadastro = "29/05/2023";
   String tipoDeCliente;
 
-  public Cliente(String name, String cpf,Date dataDeCadastro){
+  public Cliente(String name, String cpf,String dataDeCadastro){
     super(name, cpf);
-    this.dataDeCadastro = dataDeCadastro;
+    
   }
-  public Date getDataDeCadastro() {
+  public Cliente(String name, String cpf){
+    super(name, cpf);
+  }
+  public String getDataDeCadastro() {
     return dataDeCadastro;
   }
-  public void setDataDeCadastro(Date dataDeCadastro) {
+  public void setDataDeCadastro(String dataDeCadastro) {
     this.dataDeCadastro = dataDeCadastro;
   }
   public String getTipoDeCliente() {

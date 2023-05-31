@@ -1,42 +1,39 @@
+<<<<<<< HEAD
 package edu.repositorio;
+=======
+package edu.Repositorio;
+>>>>>>> origin/marcelo
 
 import java.util.ArrayList;
 
 import edu.entidades.Administrador;
 
-public class AdministradorRepositorio implements IAdministrador {
-	public ArrayList<Administrador> listaAdministrador = new ArrayList<Administrador>();
+public class AdministradorRepositorio implements IAdministrador  {
 
-    public boolean cadastrarAdministrador(Administrador name){
-        listaAdministrador.add(name);
-        return true;
+    public ArrayList<Administrador> listaAdministrador = new ArrayList<Administrador>();
+
+
+    public void cadastrarAdministrador( Administrador administrador){
+        listaAdministrador.add(administrador);
     }
-    
+    //LER
     public ArrayList<Administrador> listarAdministrador(){
         return listaAdministrador;
     }
-    public boolean atualizarAdministrador(Administrador administrador){
-        for (Administrador administrador2 : listaAdministrador) {
-            if(administrador.getCPF().equals(administrador2.getCPF())){
-                administrador2 = administrador;
-            }
-            
-        }
 
-        return true;
+    //DELETAR
+    public void deletarAdministrador(ArrayList<Administrador> listaAdministrador, Administrador name){
+        listaAdministrador.remove(name);
     }
-    public boolean validarAdministrador(ArrayList<Administrador> listaAdministrador, Administrador name){
-        return true;
-    }
-    
-    public boolean deletarAdministrador(Administrador name) {
-      listaAdministrador.remove(name);
-      return true;
+    // MODIFICAR
+
+    public void atualizarAdministrador( Administrador name, int index){
+        listaAdministrador.add(index, name);
     }
 
-
-
-
-
+    public Administrador buscarAdministrador(Administrador administrador){
+        //listaAdministrador.contains(administrador.getName());
+        return administrador;
+    }
 
 }

@@ -1,4 +1,4 @@
-package edu.repositorio;
+package edu.Repositorio;
 import java.util.ArrayList;
 import edu.entidades.Assinatura;
 

@@ -1,7 +1,9 @@
-package edu.servico;
+package edu.Servico;
 import java.util.ArrayList;
+
+import edu.Repositorio.AssinaturaRepositorio;
 import edu.entidades.Assinatura;
-import edu.repositorio.AssinaturaRepositorio;
+
 import java.util.Scanner;
 
 public class AssinaturaServico {
