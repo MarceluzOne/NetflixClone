@@ -5,11 +5,8 @@ import edu.entidades.Filme;
 
 public class FilmesRepositorio {
     
-    public ArrayList<Filme> listaFilme;
+    public ArrayList<Filme> listaFilme = new ArrayList<Filme>();
 
-    public FilmesRepositorio(ArrayList<Filme> listaFilme) {
-        this.listaFilme = listaFilme;
-    }
 
     public boolean salvarFilme(Filme name){
         listaFilme.add(name);
