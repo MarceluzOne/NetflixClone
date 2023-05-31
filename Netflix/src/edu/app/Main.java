@@ -17,7 +17,7 @@ class Main{
 
   public static void main(String[] args ){
 
-    AdministradorRepositorio repositorioADm = new AdministradorRepositorio(null);
+    AdministradorRepositorio repositorioADm = new AdministradorRepositorio();
 
     Administrador administrador = new Administrador("Marcelo Arruda", "083.751.884-92");
     Cliente cliente = new Cliente("Marcelo Junior", null);

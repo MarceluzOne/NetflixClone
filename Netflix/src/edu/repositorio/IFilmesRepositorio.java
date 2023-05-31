@@ -6,9 +6,9 @@ import edu.entidades.Filme;
 
 public interface IFilmesRepositorio {
 
-    public boolean salvarFilme(Filme filme);
-    public boolean modificarFilme(Filme filme);
-    public boolean deletarFilme(Filme filme);
-    public ArrayList<Filme> listarFilme(String name);
+    public void salvarFilme();
+    public void modificarFilme();
+    public void deletarFilme();
+    public ArrayList<Filme> listarFilme();
 
 }
