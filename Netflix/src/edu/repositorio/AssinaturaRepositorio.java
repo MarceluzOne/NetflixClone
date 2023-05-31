@@ -39,7 +39,7 @@ public class AssinaturaRepositorio implements IAssinatura {
         return false;
     }
 
-    public boolean deletarAssinatura(String plano){
+    public boolean deletarAssinatura(Assinatura plano){
         for (Assinatura assinatura : listaAssinaturas){
             if(assinatura.getplano().equals(plano)){
                 listaAssinaturas.remove(assinatura);

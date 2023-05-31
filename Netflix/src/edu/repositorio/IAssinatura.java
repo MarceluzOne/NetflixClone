@@ -10,7 +10,7 @@ public interface IAssinatura {
 
   public ArrayList<Assinatura> listarAssinatura();
 
-  public boolean deletarAssinatura(String plano);
+  public boolean deletarAssinatura(Assinatura plano);
 
   public boolean atualizarPlano(Assinatura plano);
 

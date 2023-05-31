@@ -48,7 +48,7 @@ public static void cadastroPlano() {
    
   System.out.println("Escolha a forma de pagameto :\nCREDITO\nDEBITO\nPIX\nBOLETO \n");
   
-  String dados ="";
+  String dados = Assinatura.getdados();
   String formaPagamento;
   formaPagamento = entrada.nextLine().toUpperCase();
 
