@@ -6,16 +6,15 @@ public class Assinatura  {
     private String formaPagamento;
 	private String dados;
 
-	public Assinatura(String plano, String formaPagamento) {
+	public Assinatura(String plano, String formaPagamento, String dados) {
         this.plano = plano;
         this.formaPagamento = formaPagamento;
 		this.dados = dados;
 	}
 
-
-    public String getplano() {
-		return plano;
-	}
+	public String getplano(){
+    return plano;
+  }
 
 	public void setplano(String plano) {
 		this.plano = plano;
@@ -28,7 +27,7 @@ public class Assinatura  {
 	public void setformaPagamento(String formaPagamento) {
 		this.formaPagamento = formaPagamento;
 	}
-
+	
 	public String getdados() {
 		return dados;
 	}
