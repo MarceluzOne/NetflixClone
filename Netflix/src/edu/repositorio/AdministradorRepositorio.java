@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-package edu.repositorio;
-=======
 package edu.Repositorio;
->>>>>>> origin/marcelo
 
 import java.util.ArrayList;
 
@@ -32,7 +28,7 @@ public class AdministradorRepositorio implements IAdministrador  {
     }
 
     public Administrador buscarAdministrador(Administrador administrador){
-        //listaAdministrador.contains(administrador.getName());
+        listaAdministrador.contains(administrador);
         return administrador;
     }
 
