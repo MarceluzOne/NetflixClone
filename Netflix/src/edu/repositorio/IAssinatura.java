@@ -1,5 +1,6 @@
 package edu.Repositorio;
 import java.util.ArrayList;
+
 import edu.entidades.Assinatura;
 
 public interface IAssinatura {
@@ -13,4 +14,6 @@ public interface IAssinatura {
   public boolean atualizarPlano(Assinatura plano);
 
   public boolean atualizarFormaPagamento(Assinatura formaPagamento);
+
+  public boolean atualizarDados(Assinatura dados);
 }

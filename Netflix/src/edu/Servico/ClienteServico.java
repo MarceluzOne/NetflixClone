@@ -1,32 +1,49 @@
 package edu.Servico;
-// import Exceptions.CpfInvalidoException;
-// import edu.Exceptions.NomeErroException;
-// import edu.entidades.Cliente;
-// import edu.repositorio.ClienteRepositorio;
-// import Exceptions.NomeInvalidoException;
+import edu.entidades.Cliente;
+
+import java.util.ArrayList;
+import edu.Exceptions.NomeErroException;
+import edu.Repositorio.ClienteRepositorio;
 
 public class ClienteServico {
-    
-//     public void cadastrar(Cliente cliente){
-//         try {
 
+  ClienteRepositorio repoCliente = new ClienteRepositorio();
 
-//         if (cliente.getCPF().length() < 11){
-//             throw new CpfInvalidoException();
-    
-//         }
-//         if (cliente.getName().length() < 20){
-//             throw new NomeErroException();
-//         }else{
-//             ClienteRepositorio().salvarCliente()
-//         }
-//     } catch (CpfInvalidoException ex){
-//         System.out.println("Seu CPF está incorreto.");
+  public void cadastrar(Cliente cliente){
+    try{
+      if(cliente.getName().length() > 15){
+        throw new NomeErroException();
+      }else{
+        repoCliente.salvarCliente(cliente);
+      }
+    } catch(NomeErroException e){
+      e.getMessege(cliente.getName());
+    }
+  }
 
-//         }
-//     catch (NomeErroException ex){
-//         System.out.println("Seu nome está incorreto.");
-
-//         }
-//     }
+  public void deletarCliente(Cliente cliente){
+    try{
+      if(!cliente.getName().isEmpty()){
+        throw new NomeErroException();
+        }else{
+          repoCliente.deletarCliente(cliente);
+        }
+    } catch( NomeErroException e){
+      e.getMessege(cliente.getName());
+    }
+  }
+  public void atualizarCliente(Cliente cliente){
+    try{
+      if(!cliente.getName().isBlank()){
+        throw new NomeErroException();
+    }else{
+      repoCliente.atualizarCliente(cliente, 0);
+    }
+    }catch (NomeErroException e){
+    e.getMessege(cliente.getName());
+    }
+  }
+  public ArrayList<Cliente> listarCliente(){
+    return repoCliente.listarCliente();
+  }
 }

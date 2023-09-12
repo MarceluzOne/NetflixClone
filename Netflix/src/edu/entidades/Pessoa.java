@@ -53,4 +53,9 @@ public abstract class Pessoa {
 		return ("O Nome  informado foi: " + this.name + "\nA Idade informada foi: " + this.age + "\nO CPF informado foi:  " + this.cpf + "\nO E-mail informado foi: " + this.email + "\nO telefone informado foi: " + this.phone);
 	}
 
+    
+  public void somarInteiros(int num1, int num2){
+    int resultado = num1 + num2;
+    System.out.println(resultado);
+  }
 }
